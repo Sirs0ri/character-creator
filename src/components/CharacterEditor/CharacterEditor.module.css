@@ -43,6 +43,37 @@
   /* 100% here and 50% on the controlPane children makes mobile styling a bit easier 
   Without that in mind 50% width here would be a bit neater. */
   width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  overflow-x: auto;
+}
+
+/* 600px is an arbitrary number to switch between mobile/desktop */
+@media screen and (max-width: 600px) {
+  .controlColumn {
+    /* On mobile, switch the flex-direction to row, align items at the bottom (end), 
+    cheat a little to extend over the maxWidthWrapper's margins, 
+    and set the controls to sticky to keep them at the bottom. */
+    flex-direction: row;
+
+    margin-left: -32px;
+    width: 100vw;
+
+    position: sticky;
+    top: 75vh;
+  }
+
+  .maxWidthWrapper::after {
+    /* Add some space at the end of the Wrapper so that the user can 
+    "scroll away" the header while the controls stay sticky to prevent overlaps.
+    
+    Slightly smaller than the controlColumn's top so that the footer scrolls in 
+    just before the header fully disappears */
+    content: "";
+    height: 65vh;
+    display: block;
+  }
 }
 
 /* Blue-ish bar in the very background to add some perspective to the scene */
