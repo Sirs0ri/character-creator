@@ -44,3 +44,12 @@
   Without that in mind 50% width here would be a bit neater. */
   width: 100%;
 }
+
+/* Blue-ish bar in the very background to add some perspective to the scene */
+.perspectiveBar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 40vh;
+  background-color: hsl(195deg, 20%, 86%);
+}
