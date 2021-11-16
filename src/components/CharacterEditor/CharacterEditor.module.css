@@ -31,12 +31,12 @@
 
   /* top and height weren't really specified but "feel right" this way  */
   top: 10%;
-  right: 0;
+  left: 60%;
   height: 80%;
   min-height: 500px;
   
   /* Keep a reasonable size on mobile */
-  max-width: 100vw;
+  /* max-width: 100vw; */
 }
 
 .controlColumn {
@@ -51,6 +51,9 @@
 
 /* 600px is an arbitrary number to switch between mobile/desktop */
 @media screen and (max-width: 600px) {
+  .characterWrapper {
+    left: 10%
+  }
   .controlColumn {
     /* On mobile, switch the flex-direction to row, align items at the bottom (end), 
     cheat a little to extend over the maxWidthWrapper's margins, 

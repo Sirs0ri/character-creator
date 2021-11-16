@@ -20,6 +20,10 @@
 
     margin-left: 16px;
   }
+  
+  .controlPane:last-child {
+    margin-right: 16px;
+  }
 }
 
 .title {

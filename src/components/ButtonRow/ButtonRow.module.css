@@ -1,4 +1,10 @@
 .buttonRow {
   white-space: nowrap;
   overflow-x: auto;
+
+  /* Keep the absolutely positioned screen reader hints inside the row */
+  position: relative;
+
+  margin: -22px;
+  padding: 22px;
 }
